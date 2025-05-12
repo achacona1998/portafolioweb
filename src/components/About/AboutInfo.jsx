@@ -2,6 +2,7 @@ import React from "react";
 import { Download, Code, FileArchive } from "lucide-react";
 import { CTAButton } from "../assets/CTAButton";
 import { MainTitle } from "./MainTitle";
+import { Link } from "react-router-dom";
 
 const AboutInfo = () => {
   return (
@@ -33,16 +34,26 @@ const AboutInfo = () => {
             </summary>
             <div className="absolute left-0 top-full z-10 p-2 mt-1 min-h-8 bg-dark">
               <div className="flex flex-row gap-2">
-                <CTAButton
-                  href="/CV/CV_(en).docx"
-                  text="English"
-                  icon={Download}
-                />
-                <CTAButton
-                  href="/CV/CV_(es).docx"
-                  text="Spanish"
-                  icon={Download}
-                />
+                <Link
+                  to="/CV/CV_(en).docx"
+                  rel="noopener"
+                  target="_blank"
+                  className="cursor-pointer px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2 shadow-lg bg-black/30 backdrop-blur-sm border border-[#77001A]/20 text-white hover:bg-[#77001A]/10 hover:border-[#77001A]/40 shadow-black/30 hover:shadow-[#77001A]/20">
+                  <span className="z-10 font-medium text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-white">
+                    English
+                  </span>
+                  <Download className="z-10 w-4 h-4 text-gray-200 transition-all duration-300 transform group-hover:rotate-45" />
+                </Link>
+                <Link
+                  to="/CV/CV_(es).docx"
+                  rel="noopener"
+                  target="_blank"
+                  className="cursor-pointer px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2 shadow-lg bg-black/30 backdrop-blur-sm border border-[#77001A]/20 text-white hover:bg-[#77001A]/10 hover:border-[#77001A]/40 shadow-black/30 hover:shadow-[#77001A]/20">
+                  <span className="z-10 font-medium text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-white">
+                    Spanish
+                  </span>
+                  <Download className="z-10 w-4 h-4 text-gray-200 transition-all duration-300 transform group-hover:rotate-45" />
+                </Link>
               </div>
             </div>
           </details>

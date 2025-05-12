@@ -22,7 +22,7 @@ export const ContactForm = memo(() => {
   return (
     <div
       className="relative p-8 rounded-xl bg-[#0A0A0A]/70 backdrop-blur-sm border border-[#77001A]/20"
-      data-aos="fade-right"
+      data-aos="fade-up"
       data-aos-delay="300">
       <div className="absolute -inset-0.5 bg-gradient-to-r from-[#330008] to-[#77001A] rounded-xl blur opacity-20"></div>
       <form onSubmit={handleSubmit} className="relative space-y-6">

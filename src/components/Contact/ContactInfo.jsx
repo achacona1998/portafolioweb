@@ -6,9 +6,8 @@ export const ContactInfo = memo(({ id, icon: Icon, title, content, link }) => (
     to={link}
     target="_blank"
     rel="noopener"
-    
     className="flex items-start gap-4 p-4 rounded-lg bg-[#0A0A0A]/70 backdrop-blur-sm border border-[#77001A]/20 group relative hover:border-[#77001A]/40 transition-all duration-300 "
-    data-aos="fade-left"
+    data-aos="fade-up"
     data-aos-delay={`${id}00`}>
     <div className="absolute -inset-0.5 bg-gradient-to-r from-[#330008] to-[#77001A] rounded-xl blur opacity-20 group-hover:opacity-30 transition duration-300" />
     <div className="p-2 rounded-lg bg-gradient-to-r from-[#330008]/50 to-[#77001A]/20 ">
