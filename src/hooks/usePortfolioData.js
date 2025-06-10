@@ -27,7 +27,9 @@ export const useProjects = () => {
         setProjects(formattedProjects);
       } catch (err) {
         console.error("Error loading projects:", err);
-        setError("Could not load projects. Please try again later.");
+        setError(
+          "No se pudieron cargar los proyectos. Por favor, inténtalo de nuevo más tarde."
+        );
       } finally {
         setLoading(false);
       }
@@ -60,7 +62,9 @@ export const useCertificates = () => {
         setCertificates(formattedCertificates);
       } catch (err) {
         console.error("Error loading certificates:", err);
-        setError("Could not load certificates. Please try again later.");
+        setError(
+          "No se pudieron cargar los certificados. Por favor, inténtalo de nuevo más tarde."
+        );
       } finally {
         setLoading(false);
       }

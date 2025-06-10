@@ -20,8 +20,8 @@ const Portfolio = () => {
       <div className="container px-4 mx-auto sm:px-6 lg:px-8">
         {/* Section Title */}
         <SectionTitle
-          title="Portfolio Showcase"
-          description="Explore my projects, technologies, and certifications showcasing my development journey and expertise."
+          title="Portafolio de Proyectos"
+          description="Explora mis proyectos, tecnologías y certificaciones que muestran mi trayectoria y experiencia como desarrollador."
         />
 
         {/* Loading and Error States */}
@@ -40,17 +40,17 @@ const Portfolio = () => {
           {/* Content Grids */}
           <ProjectsGrid
             projects={projects}
-            isVisible={activeTab === "Projects"}
+            isVisible={activeTab === "Proyectos"}
           />
 
           <CertificatesGrid
             certificates={certificates}
-            isVisible={activeTab === "Certificates"}
+            isVisible={activeTab === "Certificados"}
           />
 
           <TechGrid
             skills={TECH_SKILLS}
-            isVisible={activeTab === "Tech Stack"}
+            isVisible={activeTab === "Tecnologías"}
           />
         </div>
       </div>

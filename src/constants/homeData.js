@@ -5,10 +5,10 @@ export const ERASING_SPEED = 75;
 export const PAUSE_DURATION = 1500;
 
 export const WORDS = [
-  "Frontend Developer",
-  "React Specialist",
-  "UI/UX Enthusiast",
-  "Problem Solver",
+  "Desarrollador Frontend",
+  "Especialista en React",
+  "Entusiasta de UI/UX",
+  "Solucionador de Problemas",
 ];
 
 export const TECH_STACK = ["React", "Astro", "Tailwind", "Django"];

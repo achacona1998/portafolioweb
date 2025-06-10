@@ -81,19 +81,19 @@ const WelcomeScreen = ({ onComplete }) => {
                       data-aos="fade-right"
                       data-aos-delay="200"
                       className="inline-block px-2 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-300">
-                      Welcome
+                      Bienvenido
                     </span>{" "}
                     <span
                       data-aos="fade-right"
                       data-aos-delay="400"
                       className="inline-block px-2 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-300">
-                      To
+                      A
                     </span>{" "}
                     <span
                       data-aos="fade-right"
                       data-aos-delay="600"
                       className="inline-block px-2 text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-300">
-                      My
+                      Mi
                     </span>
                   </div>
                   <div>
@@ -107,7 +107,7 @@ const WelcomeScreen = ({ onComplete }) => {
                       data-aos="fade-up"
                       data-aos-delay="1000"
                       className="inline-block px-2 text-transparent bg-clip-text bg-gradient-to-r from-[#77001A] to-[#AA0020]">
-                      Website
+                      Web
                     </span>
                   </div>
                 </h1>

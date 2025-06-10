@@ -1,5 +1,6 @@
-export const PROJECT_NOT_FOUND_ERROR = "Project not found.";
-export const GENERIC_ERROR_MESSAGE = "Could not load project details. Please try again later.";
-export const LOADING_MESSAGE = "Loading...";
-export const GO_BACK_TEXT = "Go back to Home";
-export const DEFAULT_PAGE_TITLE = "Project Detail";
+export const PROJECT_NOT_FOUND_ERROR = "Proyecto no encontrado.";
+export const GENERIC_ERROR_MESSAGE =
+  "No se pudieron cargar los detalles del proyecto. Por favor, inténtalo más tarde.";
+export const LOADING_MESSAGE = "Cargando...";
+export const GO_BACK_TEXT = "Volver al Inicio";
+export const DEFAULT_PAGE_TITLE = "Detalle del Proyecto";

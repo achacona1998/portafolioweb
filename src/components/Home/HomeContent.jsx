@@ -23,8 +23,8 @@ export const HomeContent = memo(({ text }) => (
         className="max-w-xl text-base font-light leading-relaxed text-gray-400 md:text-lg"
         data-aos="fade-up"
         data-aos-delay="1000">
-        Creating innovative, functional, and user-friendly websites for digital
-        solutions.
+        Creando sitios web innovadores, funcionales y amigables para soluciones
+        digitales.
       </p>
 
       {/* Tech Stack */}
@@ -42,8 +42,8 @@ export const HomeContent = memo(({ text }) => (
         className="flex flex-row gap-3 justify-start w-full"
         data-aos="fade-up"
         data-aos-delay="1400">
-        <CTAButton href="Portfolio" text="Projects" icon={ExternalLink} />
-        <CTAButton href="Contact" text="Contact" icon={Mail} />
+        <CTAButton href="Portfolio" text="Proyectos" icon={ExternalLink} />
+        <CTAButton href="Contact" text="Contacto" icon={Mail} />
       </div>
 
       {/* Social Links */}

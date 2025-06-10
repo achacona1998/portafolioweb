@@ -21,15 +21,15 @@ import {
 
 export const SHOWCASE_TABS = [
   {
-    name: "Projects",
+    name: "Proyectos",
     icon: Code,
   },
   {
-    name: "Certificates",
+    name: "Certificados",
     icon: PiMedalBold,
   },
   {
-    name: "Tech Stack",
+    name: "Tecnologías",
     icon: Cpu,
   },
 ];

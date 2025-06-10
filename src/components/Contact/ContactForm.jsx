@@ -30,7 +30,7 @@ export const ContactForm = memo(() => {
           <label
             htmlFor="name"
             className="block mb-2 text-sm font-medium text-gray-300">
-            Name
+            Nombre
           </label>
           <input
             type="text"
@@ -40,14 +40,14 @@ export const ContactForm = memo(() => {
             onChange={handleChange}
             required
             className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-[#77001A] focus:ring-1 focus:ring-[#77001A] transition-colors"
-            placeholder="Your name"
+            placeholder="Tu nombre"
           />
         </div>
         <div>
           <label
             htmlFor="email"
             className="block mb-2 text-sm font-medium text-gray-300">
-            Email
+            Correo
           </label>
           <input
             type="email"
@@ -57,14 +57,14 @@ export const ContactForm = memo(() => {
             onChange={handleChange}
             required
             className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-[#77001A] focus:ring-1 focus:ring-[#77001A] transition-colors"
-            placeholder="your@email.com"
+            placeholder="tu@correo.com"
           />
         </div>
         <div>
           <label
             htmlFor="message"
             className="block mb-2 text-sm font-medium text-gray-300">
-            Message
+            Mensaje
           </label>
           <textarea
             id="message"
@@ -74,7 +74,7 @@ export const ContactForm = memo(() => {
             required
             rows={6}
             className="w-full px-4 py-3 rounded-lg bg-white/5 border border-white/10 text-white placeholder-gray-500 focus:border-[#77001A] focus:ring-1 focus:ring-[#77001A] transition-colors resize-none"
-            placeholder="Your message..."
+            placeholder="Tu mensaje..."
           />
         </div>
         <button
@@ -82,22 +82,22 @@ export const ContactForm = memo(() => {
           disabled={loading}
           className="w-full px-6 py-3 rounded-lg bg-gradient-to-r from-[#77001A] to-[#AA0020] text-white font-medium hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
           {loading ? (
-            "Sending..."
+            "Enviando..."
           ) : (
             <>
               <Send className="w-5 h-5" />
-              Send Message
+              Enviar Mensaje
             </>
           )}
         </button>
         {messageStatus === "success" && (
           <div className="p-3 mt-4 text-green-400 rounded-lg bg-green-500/20">
-            ✅ Message sent successfully!
+            ✅ Mensaje enviado correctamente!
           </div>
         )}
         {messageStatus === "error" && (
           <div className="p-3 mt-4 text-red-400 rounded-lg bg-red-500/20">
-            ❌ Error sending message. Please try again.
+            ❌ Error al enviar el mensaje. Por favor pruebe otra vez.
           </div>
         )}
       </form>

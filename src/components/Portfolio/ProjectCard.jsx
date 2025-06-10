@@ -35,14 +35,14 @@ export const ProjectCard = memo(
                   rel="noopener noreferrer"
                   className="flex gap-2 items-center text-gray-400 transition-colors group/link hover:text-[#77001A]">
                   <ExternalLink className="w-5 h-5" />
-                  <span className="text-sm">Demo</span>
+                  <span className="text-sm">Demostración</span>
                 </Link>
               )}
               <Link
                 to={`/projects/${id}`}
                 className="px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2 shadow-lg bg-black/30 backdrop-blur-sm border border-[#77001A]/20 text-white hover:bg-[#77001A]/10 hover:border-[#77001A]/40 shadow-black/30 hover:shadow-[#77001A]/20">
                 <span className="z-10 font-medium text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-white">
-                  Details
+                  Detalles
                 </span>
                 <ArrowRight className="z-10 w-4 h-4 text-gray-200 transition-all duration-300 transform group-hover:rotate-45" />
               </Link>

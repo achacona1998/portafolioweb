@@ -6,20 +6,20 @@ import { Years_of_experience } from "../utils/Years_of_experience";
 export const getAboutData = (projectCount, certificatesCount) => [
   {
     icon: Code2,
-    title: "Total Projects",
-    description: "Completed projects showcase expertise",
+    title: "Proyectos Totales",
+    description: "Proyectos completados que muestran experiencia",
     data: projectCount,
   },
   {
     icon: PiMedalBold,
-    title: "Certificates",
-    description: "Professional certifications and courses completed",
+    title: "Certificados",
+    description: "Certificaciones profesionales y cursos completados",
     data: certificatesCount,
   },
   {
     icon: TbWorld,
-    title: "Years of experience",
-    description: "Years of professional development experience",
+    title: "Años de experiencia",
+    description: "Años de experiencia en desarrollo profesional",
     data: Years_of_experience(),
   },
 ];

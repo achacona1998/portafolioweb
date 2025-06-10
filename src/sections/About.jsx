@@ -15,9 +15,9 @@ const About = () => {
       <div className="container px-4 mx-auto sm:px-6 lg:px-8">
         {/* Section Title */}
         <SectionTitle
-          title={" About Me"}
+          title={" Sobre Mí"}
           description={
-            "Passionate frontend developer with a focus on creating beautiful and functional web experiences."
+            "Desarrollador frontend apasionado con enfoque en crear experiencias web hermosas y funcionales."
           }
         />
 

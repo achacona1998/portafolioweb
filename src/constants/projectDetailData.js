@@ -1,7 +1,7 @@
-export const PROJECT_NOT_FOUND_MESSAGE = "Project not found.";
-export const GO_BACK_TEXT = "Go back to Home";
-export const TECHNOLOGIES_TITLE = "Technologies Used";
-export const LIVE_DEMO_TEXT = "Live Demo";
+export const PROJECT_NOT_FOUND_MESSAGE = "Proyecto no encontrado.";
+export const GO_BACK_TEXT = "Volver al Inicio";
+export const TECHNOLOGIES_TITLE = "Tecnologías Utilizadas";
+export const LIVE_DEMO_TEXT = "Demo en Vivo";
 export const GITHUB_TEXT = "GitHub";
-export const PROJECTS_BREADCRUMB = "Projects";
-export const BACK_TEXT = "Back";
+export const PROJECTS_BREADCRUMB = "Proyectos";
+export const BACK_TEXT = "Atrás";

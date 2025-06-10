@@ -2,7 +2,7 @@ import { memo } from "react";
 
 export const CertificatesGrid = memo(({ certificates, isVisible }) => {
   if (!isVisible) return null;
-  
+
   return (
     <div className="grid grid-cols-2 gap-6 lg:grid-cols-4 md:grid-cols-3">
       {certificates.length > 0 &&
@@ -12,7 +12,7 @@ export const CertificatesGrid = memo(({ certificates, isVisible }) => {
             data-aos="fade-up"
             key={index}>
             <img
-              alt={certificate.name || "Certificate"}
+              alt={certificate.name || "Certificado"}
               src={certificate.foto}
               loading="lazy"
               className="object-contain"
