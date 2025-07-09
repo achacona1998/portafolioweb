@@ -11,7 +11,7 @@ import { LoadingState } from "../components/Portfolio/LoadingState";
 import { ErrorState } from "../components/Portfolio/ErrorState";
 
 const Portfolio = () => {
-  const { activeTab, handleTabChange } = useShowcase("Projects");
+  const { activeTab, handleTabChange } = useShowcase("Proyectos");
   const { projects, loading, error } = useProjects();
   const { certificates } = useCertificates();
 

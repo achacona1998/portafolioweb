@@ -7,7 +7,7 @@ export const MainTitle = memo(({ name }) => (
       data-aos="fade-up"
       data-aos-delay="100">
       <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#77001A] to-[#AA0020] ">
-        Hello, I'm
+        Hola, Soy
       </span>
       <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-[#BBBBBB] block">
         {name}
