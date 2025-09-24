@@ -4,7 +4,7 @@ export const TechGrid = memo(({ skills, isVisible }) => {
   if (!isVisible) return null;
   
   return (
-    <div className="grid grid-cols-3 gap-2 place-items-center p-4 md:grid-cols-4 lg:grid-cols-6">
+    <div className="grid grid-cols-3 gap-5 place-items-center p-4 md:grid-cols-4 lg:grid-cols-6">
       {skills.map((tech, index) => (
         <div
           key={index}
