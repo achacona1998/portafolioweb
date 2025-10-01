@@ -1,7 +1,7 @@
 export const extractProjectData = (project) => {
   if (!project) return null;
 
-  const { titulo, descripcion, imagen, tecnologias, enlace, github } = project;
+  const { titulo, descripcion, imagen, tecnologias, enlace, github, análisis, datos, pruebas } = project;
 
   return {
     title: titulo,
@@ -10,5 +10,8 @@ export const extractProjectData = (project) => {
     technologies: tecnologias,
     liveUrl: enlace,
     githubUrl: github,
+    analysis: análisis,
+    data: datos,
+    tests: pruebas,
   };
 };

@@ -17,30 +17,55 @@ const Background = () => {
         animation: blob3Move 35s ease-in-out infinite alternate;
       }
       
+      .blob4 {
+        animation: blob4Move 28s ease-in-out infinite alternate;
+      }
+      
+      .blob5 {
+        animation: blob5Move 32s ease-in-out infinite alternate;
+      }
+      
       @keyframes blob1Move {
         0% { transform: translate(0, 0) scale(1); }
-        25% { transform: translate(20vw, 10vh) scale(1.2); }
-        50% { transform: translate(5vw, 30vh) scale(0.8); }
-        75% { transform: translate(-15vw, 5vh) scale(1.1); }
-        100% { transform: translate(10vw, -10vh) scale(0.9); }
+        25% { transform: translate(30vw, 20vh) scale(1.2); }
+        50% { transform: translate(-20vw, 40vh) scale(0.8); }
+        75% { transform: translate(25vw, -15vh) scale(1.1); }
+        100% { transform: translate(-10vw, -30vh) scale(0.9); }
       }
       
       @keyframes blob2Move {
         0% { transform: translate(0, 0) scale(1); }
-        20% { transform: translate(-25vw, -15vh) scale(1.1); }
-        40% { transform: translate(-10vw, 20vh) scale(0.9); }
-        60% { transform: translate(15vw, -5vh) scale(1.2); }
-        80% { transform: translate(5vw, -25vh) scale(0.8); }
-        100% { transform: translate(-20vw, 15vh) scale(1); }
+        20% { transform: translate(-35vw, -25vh) scale(1.1); }
+        40% { transform: translate(15vw, 35vh) scale(0.9); }
+        60% { transform: translate(30vw, -20vh) scale(1.2); }
+        80% { transform: translate(-25vw, -35vh) scale(0.8); }
+        100% { transform: translate(-15vw, 25vh) scale(1); }
       }
       
       @keyframes blob3Move {
         0% { transform: translate(0, 0) scale(1); }
-        20% { transform: translate(15vw, -20vh) scale(0.9); }
-        40% { transform: translate(-15vw, -10vh) scale(1.1); }
-        60% { transform: translate(-5vw, 15vh) scale(0.8); }
-        80% { transform: translate(20vw, 10vh) scale(1.2); }
-        100% { transform: translate(-10vw, -25vh) scale(1); }
+        20% { transform: translate(25vw, -30vh) scale(0.9); }
+        40% { transform: translate(-30vw, -15vh) scale(1.1); }
+        60% { transform: translate(-10vw, 30vh) scale(0.8); }
+        80% { transform: translate(35vw, 15vh) scale(1.2); }
+        100% { transform: translate(-20vw, -40vh) scale(1); }
+      }
+      
+      @keyframes blob4Move {
+        0% { transform: translate(0, 0) scale(1); }
+        25% { transform: translate(-40vw, 25vh) scale(1.1); }
+        50% { transform: translate(20vw, -35vh) scale(0.9); }
+        75% { transform: translate(-15vw, 40vh) scale(1.2); }
+        100% { transform: translate(30vw, -20vh) scale(0.8); }
+      }
+      
+      @keyframes blob5Move {
+        0% { transform: translate(0, 0) scale(1); }
+        20% { transform: translate(40vw, -40vh) scale(0.8); }
+        40% { transform: translate(-25vw, 30vh) scale(1.2); }
+        60% { transform: translate(35vw, 25vh) scale(0.9); }
+        80% { transform: translate(-40vw, -20vh) scale(1.1); }
+        100% { transform: translate(15vw, -35vh) scale(1); }
       }
     `;
     document.head.appendChild(style);
@@ -69,7 +94,7 @@ const Background = () => {
           className="blob1 absolute top-[20%] left-[15%] w-[400px] h-[400px] rounded-full opacity-50"
           style={{
             backgroundColor: "#77001A",
-            filter: "blur(80px)",
+            filter: "blur(70px)",
           }}
         />
 
@@ -84,7 +109,7 @@ const Background = () => {
             height: "500px",
             backgroundColor: "#550012",
             borderRadius: "50%",
-            filter: "blur(100px)",
+            filter: "blur(70px)",
             opacity: 0.6,
           }}
         />
@@ -100,8 +125,40 @@ const Background = () => {
             height: "350px",
             backgroundColor: "#77001A",
             borderRadius: "50%",
-            filter: "blur(90px)",
+            filter: "blur(70px)",
             opacity: 0.4,
+          }}
+        />
+
+        {/* Red gradient blob 4 - with animation */}
+        <div
+          className="blob4"
+          style={{
+            position: "absolute",
+            top: "10%",
+            right: "10%",
+            width: "300px",
+            height: "300px",
+            backgroundColor: "#990022",
+            borderRadius: "50%",
+            filter: "blur(70px)",
+            opacity: 0.5,
+          }}
+        />
+
+        {/* Red gradient blob 5 - with animation */}
+        <div
+          className="blob5"
+          style={{
+            position: "absolute",
+            bottom: "20%",
+            left: "10%",
+            width: "450px",
+            height: "450px",
+            backgroundColor: "#660015",
+            borderRadius: "50%",
+            filter: "blur(70px)",
+            opacity: 0.3,
           }}
         />
 

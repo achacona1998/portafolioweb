@@ -14,8 +14,17 @@ const ProjectDetail = ({ project }) => {
     return <ProjectNotFound />;
   }
 
-  const { title, description, image, technologies, liveUrl, githubUrl } =
-    extractProjectData(project);
+  const {
+    title,
+    description,
+    image,
+    technologies,
+    liveUrl,
+    githubUrl,
+    analysis,
+    data,
+    tests,
+  } = extractProjectData(project);
 
   const handleBackButtonClick = () => {
     navigate(-1);
@@ -34,13 +43,17 @@ const ProjectDetail = ({ project }) => {
           <ProjectImage image={image} title={title} />
         </div>
 
-        <div className="flex flex-wrap-reverse justify-between items-center">
-          {/* Technologies */}
-          <TechnologiesList technologies={technologies} />
+        {/* Technologies */}
+        <TechnologiesList technologies={technologies} />
 
-          {/* Links */}
-          <ProjectLinks liveUrl={liveUrl} githubUrl={githubUrl} />
-        </div>
+        {/* Links */}
+        <ProjectLinks
+          liveUrl={liveUrl}
+          githubUrl={githubUrl}
+          analysis={analysis}
+          data={data}
+          tests={tests}
+        />
       </div>
     </div>
   );

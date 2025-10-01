@@ -18,8 +18,7 @@ export default function ProjectPage() {
   return (
     <Layout title={pageTitle}>
       <Background />
-      <Navbar />
-      <main className="relative pt-20 min-h-screen">
+      <main className="relative pt-5 min-h-screen">
         <LoadingState isLoading={loading} />
         {!loading && project && <ProjectDetail project={project} />}
         {!loading && error && <ErrorState errorMessage={error} />}

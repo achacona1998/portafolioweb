@@ -21,6 +21,9 @@ export const useProjects = () => {
           technologies: project.tecnologias || [],
           githubUrl: project.github || "",
           liveUrl: project.enlace || "",
+          analysis: project.análisis || "",
+          data: project.datos || "",
+          tests: project.pruebas || "",
           id: project.id,
         }));
 

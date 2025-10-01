@@ -45,6 +45,9 @@ export const getProjects = async () => {
     return data.map((project) => ({
       ...project,
       tecnologias: project.tecnologias || [],
+      análisis: project.análisis || "",
+      datos: project.datos || "",
+      pruebas: project.pruebas || "",
     }));
   } catch (error) {
     throw new Error(`Error getting projects: ${error.message}`);
@@ -77,6 +80,9 @@ export const getProjectById = async (id) => {
     return {
       ...data,
       tecnologias: data.tecnologias || [],
+      análisis: data.análisis || "",
+      datos: data.datos || "",
+      pruebas: data.pruebas || "",
     };
   } catch (error) {
     throw new Error(`Error getting project: ${error.message}`);

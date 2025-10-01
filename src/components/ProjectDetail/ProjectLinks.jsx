@@ -1,34 +1,80 @@
 import { memo } from "react";
-import { ExternalLink, Github } from "lucide-react";
-import { CTAButton } from "../assets/CTAButton";
-import { LIVE_DEMO_TEXT, GITHUB_TEXT } from "../../constants/projectDetailData";
-import { Link } from "react-router-dom";
+import {
+  ExternalLink,
+  Github,
+  FileCode2,
+  Database,
+  BugPlay,
+} from "lucide-react";
+import {
+  LIVE_DEMO_TEXT,
+  GITHUB_TEXT,
+  EVIDENCIAS_DEL_PROYECTO,
+  ANALYSIS_TEXT,
+  DATA_TEXT,
+  TESTS_TEXT,
+} from "../../constants/projectDetailData";
+import { FolderCode } from "lucide-react";
+import { LinkButton } from "./LinkButton";
 
-export const ProjectLinks = memo(({ liveUrl, githubUrl }) => (
-  <div className="flex flex-row gap-4 mb-8">
-    {liveUrl && (
-      <Link
-        to={liveUrl}
-        rel="noopener"
-        target="_blank"
-        className="cursor-pointer px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2 shadow-lg bg-black/30 backdrop-blur-sm border border-[#77001A]/20 text-white hover:bg-[#77001A]/10 hover:border-[#77001A]/40 shadow-black/30 hover:shadow-[#77001A]/20">
-        <span className="z-10 font-medium text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-white">
-          {LIVE_DEMO_TEXT}
-        </span>
-        <ExternalLink className="z-10 w-4 h-4 text-gray-200 transition-all duration-300 transform group-hover:rotate-45" />
-      </Link>
-    )}
-    {githubUrl && (
-      <Link
-        to={githubUrl}
-        rel="noopener"
-        target="_blank"
-        className="cursor-pointer px-6 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 active:scale-95 flex items-center gap-2 shadow-lg bg-black/30 backdrop-blur-sm border border-[#77001A]/20 text-white hover:bg-[#77001A]/10 hover:border-[#77001A]/40 shadow-black/30 hover:shadow-[#77001A]/20">
-        <span className="z-10 font-medium text-transparent bg-clip-text bg-gradient-to-r from-gray-200 to-white">
-          {GITHUB_TEXT}
-        </span>
-        <Github className="z-10 w-4 h-4 text-gray-200 transition-all duration-300 transform group-hover:rotate-45" />
-      </Link>
-    )}
-  </div>
-));
+export const ProjectLinks = memo(
+  ({ liveUrl, githubUrl, analysis, data, tests }) => {
+    // Configuración de enlaces con sus respectivos iconos y textos
+    const linkConfigs = [
+      {
+        url: liveUrl,
+        text: LIVE_DEMO_TEXT,
+        icon: ExternalLink,
+        key: "live",
+      },
+      {
+        url: githubUrl,
+        text: GITHUB_TEXT,
+        icon: Github,
+        key: "github",
+      },
+      {
+        url: analysis,
+        text: ANALYSIS_TEXT,
+        icon: FileCode2,
+        key: "analysis",
+      },
+      {
+        url: data,
+        text: DATA_TEXT,
+        icon: Database,
+        key: "data",
+      },
+      {
+        url: tests,
+        text: TESTS_TEXT,
+        icon: BugPlay,
+        key: "tests",
+      },
+    ];
+
+    // Filtrar solo los enlaces que tienen URL
+    const availableLinks = linkConfigs.filter((config) => config.url);
+
+    // Si no hay enlaces disponibles, no renderizar nada
+    if (availableLinks.length === 0) {
+      return null;
+    }
+
+    return (
+      <div className="">
+        <div className="flex gap-3 items-center mb-4">
+          <FolderCode className="w-5 h-5" />
+          <h2 className="text-xl font-semibold text-white">
+            {EVIDENCIAS_DEL_PROYECTO}
+          </h2>
+        </div>
+        <div className="flex flex-wrap gap-4 mb-8">
+          {availableLinks.map(({ url, text, icon, key }) => (
+            <LinkButton key={key} url={url} text={text} icon={icon} />
+          ))}
+        </div>
+      </div>
+    );
+  }
+);

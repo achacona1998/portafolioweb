@@ -1,7 +1,11 @@
 export const PROJECT_NOT_FOUND_MESSAGE = "Proyecto no encontrado.";
 export const GO_BACK_TEXT = "Volver al Inicio";
 export const TECHNOLOGIES_TITLE = "Tecnologías Utilizadas";
-export const LIVE_DEMO_TEXT = "Demo en Vivo";
+export const EVIDENCIAS_DEL_PROYECTO = "Evidencias del Proyecto";
+export const LIVE_DEMO_TEXT = "Ver en línea";
 export const GITHUB_TEXT = "GitHub";
+export const DATA_TEXT = "Datos";
+export const TESTS_TEXT = "Pruebas";
+export const ANALYSIS_TEXT = "Análisis";
 export const PROJECTS_BREADCRUMB = "Proyectos";
 export const BACK_TEXT = "Atrás";

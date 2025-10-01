@@ -128,7 +128,7 @@ const WelcomeScreen = ({ onComplete }) => {
                   <div className="flex relative gap-2 items-center text-lg sm:text-xl md:text-2xl">
                     <Globe className="w-4 h-4 text-[#77001A] sm:w-5 sm:h-5" />
                     <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#77001A] to-[#AA0020]">
-                      <TypewriterEffect text="github.com/achacona1998" />
+                      <TypewriterEffect text="achacona1998" />
                     </span>
                   </div>
                 </Link>

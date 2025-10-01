@@ -35,7 +35,7 @@ export const ProjectCard = memo(
                   rel="noopener noreferrer"
                   className="flex gap-2 items-center text-gray-400 transition-colors group/link hover:text-[#77001A]">
                   <ExternalLink className="w-5 h-5" />
-                  <span className="text-sm">Demostración</span>
+                  <span className="text-sm">Ver en línea</span>
                 </Link>
               )}
               <Link
