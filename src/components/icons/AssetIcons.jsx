@@ -12,6 +12,7 @@ import SQLite from "../../assets/svg/SQLite.svg";
 import Vercel from "../../assets/svg/Vercel.svg";
 import Vitest from "../../assets/svg/Vitest.svg";
 import Docker from "../../assets/svg/docker.svg"; // note: lowercase filename
+import Supabase from "../../assets/svg/Supabase.svg";
 
 function createSvgIcon(src, defaultAlt) {
   return function SvgAssetIcon({
@@ -54,6 +55,7 @@ export const SQLiteIcon = createSvgIcon(SQLite, "SQLite");
 export const VercelIcon = createSvgIcon(Vercel, "Vercel");
 export const VitestIcon = createSvgIcon(Vitest, "Vitest");
 export const DockerIcon = createSvgIcon(Docker, "Docker");
+export const SupabaseIcon = createSvgIcon(Supabase, "Supabase");
 
 // Optional: consolidated map for dynamic usage
 export const AssetIconsMap = {
@@ -68,7 +70,7 @@ export const AssetIconsMap = {
   vercel: VercelIcon,
   vitest: VitestIcon,
   docker: DockerIcon,
+  supabase: SupabaseIcon,
 };
 
 export default AssetIconsMap;
-

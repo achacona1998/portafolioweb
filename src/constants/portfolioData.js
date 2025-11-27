@@ -13,7 +13,6 @@ import {
   Netlify,
   Node,
   React,
-  Supabase,
   Tailwind,
   TypeScript,
   Vite,
@@ -30,6 +29,7 @@ import {
   VercelIcon,
   VitestIcon,
   DockerIcon,
+  SupabaseIcon,
 } from "../components/icons/AssetIcons";
 
 export const SHOWCASE_TABS = [
@@ -65,7 +65,7 @@ export const TECH_SKILLS = [
 
   // Bases de datos
   { name: "MongoDB", icon: Mongo, category: "database" },
-  { name: "Supabase", icon: Supabase, category: "database" },
+  { name: "Supabase", icon: SupabaseIcon, category: "database" },
   { name: "MySQL", icon: MySQLIcon, category: "database" },
   { name: "PostgreSQL", icon: PostgresIcon, category: "database" },
   { name: "SQLite", icon: SQLiteIcon, category: "database" },
