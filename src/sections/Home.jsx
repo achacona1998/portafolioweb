@@ -1,5 +1,9 @@
-import React, { useEffect, memo, useState } from "react";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
+import React, { useEffect, memo, useState, useRef, Suspense } from "react";
+const DotLottieReactLazy = React.lazy(() =>
+  import("@lottiefiles/dotlottie-react").then((m) => ({
+    default: m.DotLottieReact,
+  }))
+);
 import { useTypingEffect } from "../hooks/useTypingEffect";
 import { initializeAOS } from "../utils/animationUtils";
 import { LOTTIE_OPTIONS } from "../constants/homeData";
@@ -21,6 +25,33 @@ const Home = () => {
     return () => setIsLoaded(false);
   }, []);
 
+  // Preferencias de movimiento reducido
+  const [reduceMotion, setReduceMotion] = useState(false);
+  useEffect(() => {
+    const media = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const handler = () => setReduceMotion(media.matches);
+    handler();
+    media.addEventListener?.("change", handler);
+    return () => media.removeEventListener?.("change", handler);
+  }, []);
+
+  // Renderizar Lottie solo cuando entra en el viewport
+  const animRef = useRef(null);
+  const [inView, setInView] = useState(false);
+  useEffect(() => {
+    if (!animRef.current) return;
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) setInView(true);
+        });
+      },
+      { root: null, threshold: 0.1 }
+    );
+    observer.observe(animRef.current);
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section
       id="Home"
@@ -32,10 +63,37 @@ const Home = () => {
 
           {/* Right Column - Optimized Lottie Animation */}
           <div
+            ref={animRef}
             className="w-full py-[10%] sm:py-0 order-2 mt-8 lg:mt-0 flex items-center lg:justify-end justify-center"
             data-aos="fade-left"
             data-aos-delay="600">
-            <DotLottieReact {...LOTTIE_OPTIONS} />
+            {reduceMotion ? (
+              <img
+                src="/Image.webp"
+                alt="Static illustration"
+                className="max-w-full h-auto"
+                loading="lazy"
+              />
+            ) : inView ? (
+              <Suspense
+                fallback={
+                  <img
+                    src="/Image.webp"
+                    alt="Loading animation"
+                    className="max-w-full h-auto"
+                    loading="lazy"
+                  />
+                }>
+                <DotLottieReactLazy {...LOTTIE_OPTIONS} />
+              </Suspense>
+            ) : (
+              <img
+                src="/Image.webp"
+                alt="Animation placeholder"
+                className="max-w-full h-auto"
+                loading="lazy"
+              />
+            )}
           </div>
         </div>
       </div>
