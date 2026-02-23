@@ -250,6 +250,46 @@ export default function ProjectPage() {
                     </div>
                   )}
 
+                  <div className="p-6 rounded-2xl bg-[#050505]/90 border border-[#77001A]/30 shadow-inner shadow-black/40">
+                    <div className="flex gap-3 items-center mb-4">
+                      <Calendar className="w-5 h-5 text-[#FF9A8B]" />
+                      <h2 className="text-lg font-semibold text-white">
+                        Proceso de desarrollo
+                      </h2>
+                    </div>
+                    <div className="relative">
+                      <div className="absolute left-5 top-0 bottom-0 w-[2px] bg-gradient-to-b from-[#FF9A8B] via-[#77001A] to-[#FFE29F] opacity-50" />
+                      <ol className="pl-14 space-y-6">
+                        {timelineItems.map((step, index) => (
+                          <li
+                            key={`${step.title}-${index}`}
+                            className="relative group">
+                            <div className="absolute -left-14 top-5 flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-br from-[#77001A] to-[#4a0010] text-white ring-2 ring-[#77001A]/50 shadow-md shadow-[#77001A]/30">
+                              <span className="text-xs font-semibold">
+                                {String(index + 1).padStart(2, "0")}
+                              </span>
+                            </div>
+                            <div className="p-4 rounded-xl bg-black/50 border border-[#77001A]/30 backdrop-blur-sm transition-colors duration-300 group-hover:border-[#FF9A8B]/60">
+                              <h3 className="text-sm font-semibold text-white">
+                                {step.title}
+                              </h3>
+                              {step.date && (
+                                <p className="text-[11px] text-gray-400">
+                                  {step.date}
+                                </p>
+                              )}
+                              {step.description && (
+                                <p className="mt-1 text-xs text-gray-300">
+                                  {step.description}
+                                </p>
+                              )}
+                            </div>
+                          </li>
+                        ))}
+                      </ol>
+                    </div>
+                  </div>
+
                   {(tests || data) && (
                     <div className="p-6 rounded-2xl bg-[#050505]/90 border border-[#77001A]/30 shadow-inner shadow-black/40">
                       <div className="flex gap-3 items-center mb-3">
@@ -295,37 +335,6 @@ export default function ProjectPage() {
                       </div>
                     </div>
                   )}
-
-                  <div className="p-4 rounded-2xl bg-[#050505]/90 border border-[#77001A]/30 shadow-inner shadow-black/40">
-                    <div className="flex gap-3 items-center mb-3">
-                      <Calendar className="w-5 h-5 text-[#FF9A8B]" />
-                      <h2 className="text-lg font-semibold text-white">
-                        Proceso de desarrollo
-                      </h2>
-                    </div>
-                    <ol className="space-y-3">
-                      {timelineItems.map((step, index) => (
-                        <li
-                          key={`${step.title}-${index}`}
-                          className="relative pl-6">
-                          <div className="absolute left-0 top-2 w-2 h-2 rounded-full bg-[#FF9A8B]" />
-                          <h3 className="text-sm font-semibold text-white">
-                            {step.title}
-                          </h3>
-                          {step.date && (
-                            <p className="text-[11px] text-gray-400">
-                              {step.date}
-                            </p>
-                          )}
-                          {step.description && (
-                            <p className="mt-1 text-xs text-gray-300">
-                              {step.description}
-                            </p>
-                          )}
-                        </li>
-                      ))}
-                    </ol>
-                  </div>
 
                   {(challengesContent.challenges.length > 0 ||
                     challengesContent.solutions.length > 0) && (
