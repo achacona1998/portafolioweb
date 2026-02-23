@@ -1,31 +1,28 @@
-import React, { memo } from "react";
+import { memo } from "react";
 import SectionTitle from "../components/assets/SectionTitle";
 import { AboutCard } from "../components/About/AboutCard";
-import { useProjectCount, useCertificatesCount } from "../hooks/useCounters";
+import { useProjectCount } from "../hooks/useCounters";
 import { getAboutData } from "../constants/aboutData";
 import AboutInfo from "../components/About/AboutInfo";
 
 const About = () => {
   const projectCount = useProjectCount();
-  const certificatesCount = useCertificatesCount();
-  const data = getAboutData(projectCount, certificatesCount);
+  const data = getAboutData(projectCount);
+  const gridCols = data.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3";
 
   return (
     <section id="About" className="py-20 min-h-screen md:pt-28">
       <div className="container px-4 mx-auto sm:px-6 lg:px-8">
-        {/* Section Title */}
         <SectionTitle
-          title={" Sobre Mí"}
+          title={"Sobre mí"}
           description={
-            "Desarrollador frontend apasionado con enfoque en crear experiencias web hermosas y funcionales."
+            "Desarrollador especializado en plataformas SaaS y e-commerce de alto rendimiento, centrado en negocio y experiencia de usuario."
           }
         />
 
-        {/* My Info Component */}
         <AboutInfo />
 
-        {/* About Cards Grid */}
-        <div className="grid grid-cols-1 gap-6 mt-20 md:grid-cols-3">
+        <div className={`grid grid-cols-1 gap-6 mt-20 ${gridCols}`}>
           {data.map((card, index) => (
             <AboutCard
               key={index}

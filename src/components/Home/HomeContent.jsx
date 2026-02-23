@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { Mail, ExternalLink } from "lucide-react";
+import { Mail, ExternalLink, Download } from "lucide-react";
 import { StatusBadge } from "./StatusBadge";
 import { MainTitle } from "./MainTitle";
 import { TypingEffect } from "./TypingEffect";
@@ -10,26 +10,24 @@ import { TECH_STACK, SOCIAL_LINKS } from "../../constants/homeData";
 
 export const HomeContent = memo(({ text }) => (
   <div
-    className="order-1 space-y-6 w-full text-left lg:w-1/2 sm:space-y-8 lg:text-left lg:order-1 lg:mt-0"
+    className="space-y-8 w-full max-w-2xl"
     data-aos="fade-right"
     data-aos-delay="200">
-    <div className="space-y-4 sm:space-y-6">
+    <div className="space-y-6">
       <StatusBadge />
       <MainTitle />
       <TypingEffect text={text} />
 
-      {/* Description */}
       <p
-        className="max-w-xl text-base font-light leading-relaxed text-gray-400 md:text-lg"
+        className="text-base font-light leading-relaxed text-gray-400 md:text-lg"
         data-aos="fade-up"
         data-aos-delay="1000">
-        Creando sitios web innovadores, funcionales y amigables para soluciones
-        digitales.
+        Desarrollando plataformas SaaS y e-commerce de alto rendimiento, con
+        interfaces modernas y optimizadas para conversión.
       </p>
 
-      {/* Tech Stack */}
       <div
-        className="flex flex-wrap gap-3 justify-start"
+        className="flex flex-wrap gap-3"
         data-aos="fade-up"
         data-aos-delay="1200">
         {TECH_STACK.map((tech, index) => (
@@ -37,18 +35,23 @@ export const HomeContent = memo(({ text }) => (
         ))}
       </div>
 
-      {/* CTA Buttons */}
       <div
-        className="flex flex-row gap-3 justify-start w-full"
+        className="flex flex-row flex-wrap gap-4 w-full"
         data-aos="fade-up"
         data-aos-delay="1400">
         <CTAButton href="Portfolio" text="Proyectos" icon={ExternalLink} />
+        <CTAButton
+          href="/CV/CV(es).pdf"
+          text="Descargar CV"
+          icon={Download}
+          isDownload={true}
+          isExternal={true}
+        />
         <CTAButton href="Contact" text="Contacto" icon={Mail} />
       </div>
 
-      {/* Social Links */}
       <div
-        className="flex gap-4 justify-start pt-2 pb-6 sm:pt-0 sm:pb-0"
+        className="flex gap-4 pt-2 pb-6 sm:pt-0 sm:pb-0"
         data-aos="fade-up"
         data-aos-delay="1600">
         {SOCIAL_LINKS.map((social, index) => (

@@ -1,4 +1,4 @@
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin, Mail, Instagram } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 
 export const contactInfo = [
@@ -22,5 +22,12 @@ export const contactInfo = [
     title: "Linkedin",
     content: "Ariel Chacon Artola",
     link: "https://www.linkedin.com/in/ariel-chacon-artola-7a00bb2b4/",
+  },
+  {
+    id: 7,
+    icon: Instagram,
+    title: "Instagram",
+    content: "Ariel.Dev98",
+    link: "https://www.instagram.com/ariel.dev98?igsh=MTQ0ajhrMm80Y3Y3Mw==",
   },
 ];

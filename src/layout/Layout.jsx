@@ -3,6 +3,8 @@ import { Helmet, HelmetProvider } from "react-helmet-async";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import WelcomeScreen from "../components/assets/WelcomeScreen";
+import { ContactModalProvider } from "../context/ContactModalContext";
+import { ContactModal } from "../components/Contact/ContactModal";
 
 // Create a helmet context outside the component
 const helmetContext = {};
@@ -34,7 +36,7 @@ export default function Layout({ title, description, children, keywords }) {
 
   return (
     <HelmetProvider context={helmetContext}>
-      <>
+      <ContactModalProvider>
         <Helmet>
           <title>{title || "Portfolio - Frontend Developer | Acha Dev"}</title>
           <meta
@@ -90,7 +92,8 @@ export default function Layout({ title, description, children, keywords }) {
           }`}>
           {children}
         </div>
-      </>
+        <ContactModal />
+      </ContactModalProvider>
     </HelmetProvider>
   );
 }

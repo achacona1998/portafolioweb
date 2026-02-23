@@ -7,8 +7,10 @@ export const MobileNav = memo(({ isMenuOpen, toggleMenu, closeMenu }) => (
   <>
     {/* Mobile Menu Button */}
     <button
-      className="flex text-white md:hidden p-2 rounded-md bg-[#0A0A0A]/50 border border-[#77001A]/20 hover:border-[#77001A] hover:bg-[#323232]/40 transition-colors duration-300"
-      onClick={toggleMenu}>
+      className="flex text-white md:hidden p-2 rounded-md bg-[#0A0A0A]/50 border border-[#77001A]/20 hover:border-[#77001A] hover:bg-[#323232]/40 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-[#77001A]"
+      onClick={toggleMenu}
+      aria-label={isMenuOpen ? "Cerrar menú" : "Abrir menú"}
+      aria-expanded={isMenuOpen}>
       {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
     </button>
 

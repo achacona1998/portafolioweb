@@ -1,11 +1,11 @@
 import { memo } from "react";
-import { extractProjectData } from "../utils/projectUtils";
-import { ProjectNotFound } from "../components/ProjectDetail/ProjectNotFound";
-import { BackButton } from "../components/ProjectDetail/BackButton";
-import { ProjectHeader } from "../components/ProjectDetail/ProjectHeader";
-import { ProjectImage } from "../components/ProjectDetail/ProjectImage";
-import { TechnologiesList } from "../components/ProjectDetail/TechnologiesList";
-import { ProjectLinks } from "../components/ProjectDetail/ProjectLinks";
+import { extractProjectData } from "../../utils/projectUtils";
+import { ProjectNotFound } from "../../components/ProjectDetail/ProjectNotFound";
+import { BackButton } from "../../components/ProjectDetail/BackButton";
+import { ProjectHeader } from "../../components/ProjectDetail/ProjectHeader";
+import { ProjectImage } from "../../components/ProjectDetail/ProjectImage";
+import { TechnologiesList } from "../../components/ProjectDetail/TechnologiesList";
+import { ProjectLinks } from "../../components/ProjectDetail/ProjectLinks";
 import { useNavigate } from "react-router-dom";
 
 const ProjectDetail = ({ project }) => {
@@ -60,3 +60,4 @@ const ProjectDetail = ({ project }) => {
 };
 
 export default memo(ProjectDetail);
+

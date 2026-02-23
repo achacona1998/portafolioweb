@@ -5,13 +5,13 @@ export const ERASING_SPEED = 75;
 export const PAUSE_DURATION = 1500;
 
 export const WORDS = [
-  "Desarrollador Frontend",
-  "Especialista en React",
-  "Entusiasta de UI/UX",
-  "Solucionador de Problemas",
+  "Desarrollador Full-Stack orientado a resultados",
+  "Frontend & E-commerce Performance Specialist",
+  "Plataformas SaaS y e-commerce de alto rendimiento",
+  "Optimización de performance y SEO técnico",
 ];
 
-export const TECH_STACK = ["React", "Astro", "Tailwind", "Django"];
+export const TECH_STACK = ["React", "Astro", "Tailwind CSS", "Supabase"];
 
 export const SOCIAL_LINKS = [
   {
@@ -32,7 +32,7 @@ export const SOCIAL_LINKS = [
 ];
 
 export const LOTTIE_OPTIONS = {
-  src: "../MainScene.lottie",
+  src: "/MainScene.lottie",
   loop: true,
   autoplay: true,
   renderersettings: {
