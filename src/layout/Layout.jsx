@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Helmet, HelmetProvider } from "react-helmet-async";
+import { useLocation } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import WelcomeScreen from "../components/assets/WelcomeScreen";
@@ -10,6 +11,7 @@ import { ContactModal } from "../components/Contact/ContactModal";
 const helmetContext = {};
 
 export default function Layout({ title, description, children, keywords }) {
+  const location = useLocation();
   const [showWelcome, setShowWelcome] = useState(true);
 
   useEffect(() => {
@@ -19,7 +21,7 @@ export default function Layout({ title, description, children, keywords }) {
     });
 
     // Update document title directly as a fallback
-    document.title = title || "Portfolio - Frontend Developer | Acha Dev";
+    document.title = title || "Portfolio - Desarrollador Frontend | Acha Dev";
 
     // Hide welcome screen after content is loaded
     const timer = setTimeout(() => {
@@ -30,15 +32,18 @@ export default function Layout({ title, description, children, keywords }) {
   }, [title]);
 
   const defaultDescription =
-    "Portfolio website showcasing my work and skills as a frontend developer";
+    "Portfolio de desarrollo frontend donde muestro proyectos, casos de estudio y cómo trabajo orientado a resultados de negocio.";
   const defaultKeywords =
-    "frontend developer, web developer, React developer, JavaScript, portfolio, web design, UI/UX, responsive design, Tailwind CSS, developer portfolio";
+    "desarrollador frontend, desarrollo web, React, JavaScript, portfolio, diseño web, UI/UX, responsive design, Tailwind CSS, desarrollo orientado a negocio";
+
+  const baseUrl = "https://portafolioweb-mu.vercel.app";
+  const canonicalUrl = `${baseUrl}${location.pathname}${location.search}`;
 
   return (
     <HelmetProvider context={helmetContext}>
       <ContactModalProvider>
         <Helmet>
-          <title>{title || "Portfolio - Frontend Developer | Acha Dev"}</title>
+          <title>{title || "Portfolio - Desarrollador Frontend | Acha Dev"}</title>
           <meta
             name="description"
             content={description || defaultDescription}
@@ -48,29 +53,30 @@ export default function Layout({ title, description, children, keywords }) {
             content={keywords || defaultKeywords} 
           />
           <meta name="author" content="Acha Dev" />
+          <link rel="canonical" href={canonicalUrl} />
 
           {/* Open Graph */}
           <meta property="og:type" content="website" />
+          <meta property="og:url" content={canonicalUrl} />
           <meta
-            property="og:url"
-            content="https://achadevportfolioweb.netlify.app/"
+            property="og:title"
+            content={title || "Portfolio - Desarrollador Frontend"}
           />
-          <meta property="og:title" content={title || "Portfolio - Frontend Developer"} />
           <meta
             property="og:description"
             content={description || defaultDescription}
           />
           <meta property="og:image" content="/Image.webp" />
           <meta property="og:site_name" content="Acha Dev Portfolio" />
-          <meta property="og:locale" content="en_US" />
+          <meta property="og:locale" content="es_ES" />
 
           {/* Twitter */}
           <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:url" content={canonicalUrl} />
           <meta
-            name="twitter:url"
-            content="https://achadevportfolioweb.netlify.app/"
+            name="twitter:title"
+            content={title || "Portfolio - Desarrollador Frontend"}
           />
-          <meta name="twitter:title" content={title || "Portfolio - Frontend Developer"} />
           <meta
             name="twitter:description"
             content={description || defaultDescription}
