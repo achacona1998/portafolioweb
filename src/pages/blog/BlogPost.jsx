@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { Layout, Navbar, Footer } from "../../layout";
+import { Layout } from "../../layout";
 import Background from "../../components/assets/Background";
 import {
   getPostBySlug,
@@ -59,7 +59,6 @@ export default function BlogPost() {
     <Layout title={title} description={post?.excerpt}>
       <Background />
       <main className="relative min-h-screen">
-        <Navbar />
         <section className="pt-24 pb-20">
           <div className="container px-4 mx-auto sm:px-6 lg:px-8">
             {loading && (
@@ -148,7 +147,6 @@ export default function BlogPost() {
           </div>
         </section>
       </main>
-      <Footer />
     </Layout>
   );
 }
