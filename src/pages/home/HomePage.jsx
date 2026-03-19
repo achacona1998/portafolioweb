@@ -6,6 +6,7 @@ import {
   HowIWork,
   Services,
   Testimonials,
+  Products,
   Portfolio,
   Contact,
 } from "../../sections";
@@ -24,6 +25,7 @@ export default function HomePage() {
         <HowIWork />
         <Services />
         <Testimonials />
+        <Products />
         <Portfolio />
         <Contact />
         <Footer />
