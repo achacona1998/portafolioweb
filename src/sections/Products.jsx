@@ -81,12 +81,12 @@ const Products = () => {
               const content = (
                 <div className="p-6 space-y-4">
                   <div className="flex gap-4 items-center">
-                    <div className="flex overflow-hidden justify-center items-center w-14 h-14 rounded-2xl border bg-white/5 border-white/10">
+                    <div className="flex overflow-hidden justify-center items-center w-28 h-28 rounded-2xl border bg-white/5 border-white/10 shrink-0">
                       <img
                         src={product.logo}
                         alt={product.name}
                         loading="lazy"
-                        className="object-contain w-10 h-10"
+                        className="object-contain p-2 w-full h-full"
                       />
                     </div>
                     <div className="min-w-0">
